@@ -1,0 +1,107 @@
+.container {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.backgMovies {
+  width: 60vw;
+  object-fit: cover;
+}
+
+button {
+  width: 250px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: 2px solid white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background-color: black;
+  color: white;
+
+}
+
+.choice {
+  background-color: black;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  width: 300px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+header {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.containerPicActors {
+  position: absolute;
+  top: 125%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 500px;
+  /* background-color: red; */
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.boxPicActors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* background-color: blue; */
+  gap: 10px;
+  padding: 10px;
+}
+
+.backgActors {
+  width: 200px;
+  height: 267px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid grey;
+  box-shadow: 1px 1px 2.5px grey;
+}
+
+.titleActors {
+  margin-top: -70px;
+  background-color: black;
+  color: white;
+  padding: 10px 20px 10px 20px;
+  border: 2px solid white;
+  border-radius: 10px;
+}
