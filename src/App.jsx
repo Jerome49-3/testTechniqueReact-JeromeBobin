@@ -46,7 +46,7 @@ function App() {
           </button>
         </div>
       </header>
-      <Title title="Merci de choisir un film !" id='hide' classTxt="choice" />
+      <Title title="Merci de choisir un film !" classTxt="choice" />
       {/* faire apparaitre le film choisie */}
       {showMovies1 ? (
         <div className='containerPage'>

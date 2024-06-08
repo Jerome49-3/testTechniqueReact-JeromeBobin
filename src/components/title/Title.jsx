@@ -1,9 +1,9 @@
 
 const Title = (props) => {
-  const { title, classTxt, id } = props;
+  const { title, classTxt } = props;
   return (
     <>
-      <h1 className={classTxt} id={id}>
+      <h1 className={classTxt}>
         {title}
       </h1>
     </>
