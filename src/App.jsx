@@ -17,37 +17,39 @@ function App() {
       {/* <Header classBtn1={movies[0].name} classBtn2={movies[1].name} classBtn3={movies[2].name} setShowMov1={setShowMovies1} setShowMov2={setShowMovies2} setShowMov3={setShowMovies3} /> */}
       <header>
         {/* <Button name={classBtn1} setShowMov={setShowMov1} /> */}
-        <button onClick={() => {
-          setShowMovies1(true);
-          setShowMovies2(false);
-          setShowMovies3(false);
-          console.log('click')
-        }}>
-          {movies[0].name}
-        </button>
-        {/* <Button name={classBtn2} setShowMov={setShowMov2} /> */}
-        <button onClick={() => {
-          setShowMovies2(true);
-          setShowMovies1(false);
-          setShowMovies3(false);
-          console.log('click')
-        }}>
-          {movies[1].name}
-        </button>
-        {/* <Button name={classBtn3} setShowMov={setShowMov3} /> */}
-        <button onClick={() => {
-          setShowMovies3(true);
-          setShowMovies2(false);
-          setShowMovies1(false);
-          console.log('click')
-        }}>
-          {movies[2].name}
-        </button>
+        <div className="wrapper">
+          <button onClick={() => {
+            setShowMovies1(true);
+            setShowMovies2(false);
+            setShowMovies3(false);
+            console.log('click');
+          }}>
+            {movies[0].name}
+          </button>
+          {/* <Button name={classBtn2} setShowMov={setShowMov2} /> */}
+          <button onClick={() => {
+            setShowMovies2(true);
+            setShowMovies1(false);
+            setShowMovies3(false);
+            console.log('click')
+          }}>
+            {movies[1].name}
+          </button>
+          {/* <Button name={classBtn3} setShowMov={setShowMov3} /> */}
+          <button onClick={() => {
+            setShowMovies3(true);
+            setShowMovies2(false);
+            setShowMovies1(false);
+            console.log('click')
+          }}>
+            {movies[2].name}
+          </button>
+        </div>
       </header>
-      <Title title="Merci de choisir un film !" classTxt="choice" />
+      <Title title="Merci de choisir un film !" id='hide' classTxt="choice" />
       {/* faire apparaitre le film choisie */}
       {showMovies1 ? (
-        <div className='container'>
+        <div className='containerPage'>
           {
             movies.map((movie, key = uuidv4()) => {
               // { console.log('movie:', movie); }
@@ -89,7 +91,7 @@ function App() {
         </div>
       ) : (null)}
       {showMovies2 ? (
-        <div className='container'>
+        <div className='containerPage'>
           {
             movies.map((movie, key = uuidv4()) => {
               // { console.log('movie:', movie); }
@@ -131,7 +133,7 @@ function App() {
         </div>
       ) : (null)}
       {showMovies3 ? (
-        <div className='container'>
+        <div className='containerPage'>
           {
             movies.map((movie, key = uuidv4()) => {
               // { console.log('movie:', movie); }
