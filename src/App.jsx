@@ -33,7 +33,7 @@ function App() {
             setShowMovies2(true);
             setShowMovies1(false);
             setShowMovies3(false);
-            console.log('click')
+            setShowTitle(false);
           }}>
             {movies[1].name}
           </button>
@@ -42,7 +42,7 @@ function App() {
             setShowMovies3(true);
             setShowMovies2(false);
             setShowMovies1(false);
-            console.log('click')
+            setShowTitle(false);
           }}>
             {movies[2].name}
           </button>
