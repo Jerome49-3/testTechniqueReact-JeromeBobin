@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { useRef } from 'react';
 import './assets/css/App.css';
 import movies from './assets/json/movies.json';
 import Image from './components/images/Image';
@@ -12,7 +11,7 @@ function App() {
   const [showMovies1, setShowMovies1] = useState(false);
   const [showMovies2, setShowMovies2] = useState(false);
   const [showMovies3, setShowMovies3] = useState(false);
-  const ref = useRef(null);
+  const [showTitle, setShowTitle] = useState(true);
 
   return (
     <>
@@ -24,7 +23,8 @@ function App() {
             setShowMovies1(true);
             setShowMovies2(false);
             setShowMovies3(false);
-            console.log('click');
+            setShowTitle(false);
+            // console.log('click');
           }}>
             {movies[0].name}
           </button>
@@ -48,7 +48,7 @@ function App() {
           </button>
         </div>
       </header>
-      <Title ref={ref} title="Merci de choisir un film !" classTxt="choice" />
+      <Title title="Merci de choisir un film !" classTxt={showTitle ? "choice" : "hide"} />
       {/* faire apparaitre le film choisie */}
       {showMovies1 ? (
         <div className='containerPage'>
